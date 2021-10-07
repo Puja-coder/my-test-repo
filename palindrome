@@ -1,0 +1,14 @@
+# str = "malayalam"
+str = input("enter string:: ")
+
+n = len(str)
+result = "pass"
+for i in range(0, int(n/2)):
+    if str[i] != str[n-i-1]:
+        result = "fail"
+
+
+if result == "pass":
+    print("yes")
+if result == "fail":
+    print("no")
