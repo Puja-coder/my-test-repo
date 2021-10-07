@@ -1,0 +1,8 @@
+#Method 1:
+line = "abcdefghijklmnopqrstuvwxyz"
+n = 5
+print([line[i:i+n] for i in range(0, len(line), n)])
+
+#Method 2:
+for i in range(0, len(line), 5):
+	print(line[i:i+5])
