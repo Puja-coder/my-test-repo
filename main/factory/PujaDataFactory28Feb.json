@@ -1,0 +1,9 @@
+{
+	"name": "PujaDataFactory28Feb",
+	"location": "centralindia",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "4a6e7d57-8fcc-4752-a529-9de72d070236",
+		"tenantId": "debab7c1-c464-4353-b1be-e0ec1bcb1ff0"
+	}
+}
