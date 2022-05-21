@@ -27,36 +27,44 @@
 						}
 					},
 					"sink": {
-						"type": "DelimitedTextSink",
+						"type": "JsonSink",
 						"storeSettings": {
 							"type": "AzureBlobStorageWriteSettings"
 						},
 						"formatSettings": {
-							"type": "DelimitedTextWriteSettings",
-							"quoteAllText": true,
-							"fileExtension": ".txt"
+							"type": "JsonWriteSettings"
 						}
 					},
 					"enableStaging": false,
 					"translator": {
 						"type": "TabularTranslator",
-						"typeConversion": true,
-						"typeConversionSettings": {
-							"allowDataTruncation": true,
-							"treatBooleanAsNumber": false
-						}
+						"mappings": [
+							{
+								"sink": {
+									"path": "$['Column_1']"
+								}
+							}
+						]
 					}
 				},
 				"inputs": [
 					{
 						"referenceName": "DelimitedText1",
-						"type": "DatasetReference"
+						"type": "DatasetReference",
+						"parameters": {
+							"Name": "Puja",
+							"Age": 25
+						}
 					}
 				],
 				"outputs": [
 					{
-						"referenceName": "DelimitedText1",
-						"type": "DatasetReference"
+						"referenceName": "Json1",
+						"type": "DatasetReference",
+						"parameters": {
+							"Name": "Rohan",
+							"Age": 28
+						}
 					}
 				]
 			}
