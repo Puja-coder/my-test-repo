@@ -5,6 +5,16 @@
 			"referenceName": "AzureBlobStorage1",
 			"type": "LinkedServiceReference"
 		},
+		"parameters": {
+			"Name": {
+				"type": "string",
+				"defaultValue": "Puja"
+			},
+			"Age": {
+				"type": "int",
+				"defaultValue": 25
+			}
+		},
 		"annotations": [],
 		"type": "DelimitedText",
 		"typeProperties": {
