@@ -1,0 +1,28 @@
+{
+	"name": "Excel1",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureBlobStorage1",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"Name": {
+				"type": "string",
+				"defaultValue": "Seva"
+			},
+			"Age": {
+				"type": "int",
+				"defaultValue": 20
+			}
+		},
+		"annotations": [],
+		"type": "Excel",
+		"typeProperties": {
+			"sheetName": "testexcel",
+			"location": {
+				"type": "AzureBlobStorageLocation"
+			}
+		},
+		"schema": []
+	}
+}
